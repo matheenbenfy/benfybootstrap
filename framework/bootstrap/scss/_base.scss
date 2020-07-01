@@ -1,3 +1,9 @@
-.form-control {
-	border-color: #000 !important;
+.icon {
+	height: 64px;
+
+	&.smaller { height: 16px; }
+	&.small { height: 32px; }
+	&.large { height: 72px; }
+	&.larger { height: 96px; }
+	&.largest { height: 128px; }
 }
