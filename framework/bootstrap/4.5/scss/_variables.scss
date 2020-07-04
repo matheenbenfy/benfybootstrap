@@ -251,6 +251,9 @@ $rounded-pill:                50rem !default;
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+$box-shadow-small:            0 .2rem .5rem rgba($black, .075) !default;
+$box-shadow-large:            0 1.5rem 5rem rgba($black, .175) !default;
+
 
 $component-active-color:      $white !default;
 $component-active-bg:         theme-color("primary") !default;
@@ -1145,3 +1148,9 @@ $user-selects: all, auto, none !default;
 
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
+
+
+// Benfy Variables
+$positions: (
+  "absolute", "fixed", "relative"
+);

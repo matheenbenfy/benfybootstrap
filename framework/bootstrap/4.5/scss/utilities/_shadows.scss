@@ -1,6 +1,15 @@
 // stylelint-disable declaration-no-important
 
 .shadow-sm { box-shadow: $box-shadow-sm !important; }
+.shadow-md { box-shadow: $box-shadow-small } 
 .shadow { box-shadow: $box-shadow !important; }
 .shadow-lg { box-shadow: $box-shadow-lg !important; }
+.shadow-xl { box-shadow: $box-shadow-large } 
 .shadow-none { box-shadow: none !important; }
+
+.text-shadow-sm { box-shadow: $box-shadow-sm !important; }
+.text-shadow-md { box-shadow: $box-shadow-small } 
+.text-shadow { box-shadow: $box-shadow !important; }
+.text-shadow-lg { box-shadow: $box-shadow-lg !important; }
+.text-shadow-xl { box-shadow: $box-shadow-large } 
+.text-shadow-none { box-shadow: none !important; }

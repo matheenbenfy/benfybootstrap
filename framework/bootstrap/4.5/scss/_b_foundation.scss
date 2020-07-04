@@ -1,0 +1,79 @@
+// Position
+// - Relative
+.p-relative { position: relative; }
+@each $position in $positions {
+	$xy: ('top', 'bottom', 'left', 'right');
+	.p-#{$position} {
+		position: $position;
+		@if($position != 'relative') {
+			&.p-#{$position}-full {
+				top: 0px;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+			}
+			@each $place in $xy {
+				&.p-#{$position}-#{$place} { top: 0px; }
+			}
+		}
+	}
+}
+// - Absolute
+.p-absolute { 
+	position: absolute; 
+	&.p-absolute-full {
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
+	.p-absolute-top { top: 0px; }
+	.p-absolute-bottom { bottom: 0px; }
+	.p-absolute-left { left: 0px; }
+	.p-absolute-right { right: 0px; }
+}
+// - Fixed
+.p-fixed { 
+	position: absolute; 
+	&.p-absolute-full {
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
+	.p-absolute-top { top: 0px; }
+	.p-absolute-bottom { bottom: 0px; }
+	.p-absolute-left { left: 0px; }
+	.p-absolute-right { right: 0px; }
+}
+
+
+// Icons
+.icon {
+	height: 48px;
+	.smallest { height: 16px }
+	.smaller { height: 24px }
+	.small { height: 32px; }
+	.large { height: 64px; }
+	.larger { height: 76px; }
+	.largest { height: 96px; }
+}
+
+// Images
+// - Avatar Images
+// -- Vertical Profile Avatar
+.vertical-avatar { @include aspect-ratio(3, 4); }
+.vertical-avatar-tall { @include aspect-ratio(2, 4); }
+
+// -- Horizontal Profile Avatar
+.horizontal-avatar { @include aspect-ratio(4, 3); }
+.horizontal-avatar-wide { @include aspect-ratio(4, 2); }
+
+// -- Horizontal Profile Avatar
+.square-avatar { @include aspect-ratio(1, 1); }
+
+// - Profile Banner
+// -- Horizontal Banner
+.profile-banner { @include aspect-ratio(16, 9); }
+.profile-banner-wide { @include aspect-ratio(7, 3); }
+.profile-banner-wider { @include aspect-ratio(7, 2); }
